@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task</title>
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header class="mdc-top-app-bar mdc-top-app-bar--dense" id="app-bar">
+		<div class="mdc-top-app-bar__row">
+			<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+				<a href="#" class="demo-menu material-icons mdc-top-app-bar__navigation-icon">menu</a>
+				<img class="mdc-image-list__image" src="images/1.png" style="width: 6%;">	
+			</section>
+			<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+				<a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="Download" alt="Download" id="signup">how_to_reg</a>
+				<div class="mdc-dialog dialog2" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
+					<div class="mdc-dialog__container">
+						<div class="mdc-dialog__surface">
+							<div class="mdc-card bgcard">
+								<h2 class="mdc-dialog__title" id="my-dialog-title">SignUp</h2>
+								<div class="mdc-dialog__content" id="my-dialog-content">
+									<div class="mdc-text-field myText3">
+										<input type="text" id="fname" class="mdc-text-field__input">
+										<label class="mdc-floating-label" for="fname">First Name</label>
+										<div class="mdc-line-ripple"></div>
+									</div>
+									<div class="mdc-text-field myText4">
+										<input type="text" id="lname" class="mdc-text-field__input">
+										<label class="mdc-floating-label" for="lname">Last Name</label>
+										<div class="mdc-line-ripple"></div>
+									</div>
+									<div class="mdc-text-field myText5">
+										<input type="email" id="email" class="mdc-text-field__input" required>
+										<label for="email" class="mdc-floating-label">Email</label>
+										<div class="mdc-line-ripple"></div>
+									</div>
+									<div class="mdc-text-field myText6">
+										<input type="password" id="pwd" class="mdc-text-field__input" required minlength=8>
+										<label for="pwd" class="mdc-floating-label">Password</label>
+										<div class="mdc-line-ripple"></div>
+									</div>
+								</div>
+								<footer class="mdc-dialog__actions">
+									<button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="no" id="login" onclick="signup()">
+										<span class="mdc-button__label" style="color: black;">Submit</span>
+									</button>
+								</footer>
+							</div>
+						</div>
+					</div>
+					<div class="mdc-dialog__scrim"></div>
+				</div>
+
+
+				<div class="mdc-menu-surface--anchor">
+					<a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="Bookmark this page" alt="Bookmark this page" id="menu1">more_vert</a>
+					<div class="mdc-menu mdc-menu-surface" tabindex="-1">
+						<div class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+							<a href="https://material.io/develop/web/" class="mdc-list-item" role="menuitem">
+								Back
+							</a>
+							<a href="https://material.io/develop/web/" class="mdc-list-item" role="menuitem">
+								Forward
+							</a>
+							<a href="https://material.io/develop/web/" class="mdc-list-item" role="menuitem">
+								Reload
+							</a>
+							<a href="https://material.io/develop/web/" class="mdc-list-item" role="menuitem">
+								Help&Feedback
+							</a>
+							<a href="https://material.io/develop/web/" class="mdc-list-item" role="menuitem">
+								Setting
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</section>
+		</div>
+	</header>
+
+	<hr class="mdc-list-divider">
+	<aside class="mdc-drawer mdc-drawer--dismissible">
+		<div class="mdc-drawer__content" style="background-color: #03a9f429;">
+			<div class="mdc-grid-list">
+				<ul class="mdc-grid-list__tiles">
+					<li class="mdc-grid-tile">
+						<div class="mdc-grid-tile__primary">
+							<img class="mdc-image-list__image" src="images/1.png">
+						</div>
+					</li>
+				</ul>
+				<ul class="mdc-list">
+					<li class="mdc-list-item">
+						<a href="#">Inbox</a>
+					</li>
+					<hr class="mdc-list-divider">
+					<li class="mdc-list-item">
+						<a href="#">Forms</a>
+					</li>
+					<hr class="mdc-list-divider">
+					<li class="mdc-list-item">
+						<a href="#">Update</a>
+					</li>
+					<hr class="mdc-list-divider">
+					<li class="mdc-list-item">
+						<a href="#">Service</a>
+					</li>
+					<hr class="mdc-list-divider">
+					<li class="mdc-list-item">
+						<a href="#">Exit</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</aside>
+	<div class="mdc-drawer-app-content mdc-top-app-bar--fixed-adjust">
+		<main class="main-content" id="main-content">
+			<div class="mdc-layout-grid" style="width: 500px;">
+				<div class="mdc-layout-grid_inner">
+
+					<h1 style="color: white;text-align: center;color: #ffdd2282;"> Registration Form</h1>
+
+					<div class="mdc-card">
+						<div class="mdc-text-field mdc-text-field--outlined fname">
+							<input type="text" id="tf-outlined" class="mdc-text-field__input">
+							<div class="mdc-notched-outline">
+								<div class="mdc-notched-outline__leading"></div>
+								<div class="mdc-notched-outline__notch">
+									<label for="tf-outlined" class="mdc-floating-label" style="color: white;">First Name</label>
+								</div>
+								<div class="mdc-notched-outline__trailing"></div>
+							</div>
+						</div>
+						<div class="mdc-text-field mdc-text-field--outlined lname">
+							<input type="text" id="tf-outlined" class="mdc-text-field__input">
+							<div class="mdc-notched-outline">
+								<div class="mdc-notched-outline__leading"></div>
+								<div class="mdc-notched-outline__notch">
+									<label for="tf-outlined" class="mdc-floating-label" style="color: white;">Last Name</label>
+								</div>
+								<div class="mdc-notched-outline__trailing"></div>
+							</div>
+						</div>
+
+
+						<div class="mdc-text-field mdc-text-field--outlined email">
+							<input type="text" id="tf-outlined" class="mdc-text-field__input">
+							<div class="mdc-notched-outline">
+								<div class="mdc-notched-outline__leading"></div>
+								<div class="mdc-notched-outline__notch">
+									<label for="tf-outlined" class="mdc-floating-label" style="color: white;">Email</label>
+								</div>
+								<div class="mdc-notched-outline__trailing"></div>
+							</div>
+						</div>
+						<div class="mdc-text-field mdc-text-field--outlined password" >
+							<input type="text" id="tf-outlined" class="mdc-text-field__input">
+							<div class="mdc-notched-outline">
+								<div class="mdc-notched-outline__leading"></div>
+								<div class="mdc-notched-outline__notch">
+									<label for="tf-outlined" class="mdc-floating-label" style="color: white;">Password</label>
+								</div>
+								<div class="mdc-notched-outline__trailing"></div>
+							</div>
+						</div>
+						<div class="btn">
+							<button class="mdc-button--raised" id="btn-1" style="height: 35px;">
+								<span class="mdc-button__label" style="text-shadow: 1px 1px;">Submit</span>
+							</button>
+							<div class="mdc-snackbar">
+								<div class="mdc-snackbar__surface">
+									<div class="mdc-snackbar__label"
+									role="status"
+									aria-live="polite">
+									form successfully submitted.
+								</div>
+								<div class="mdc-snackbar__actions">
+									<button type="button" class="mdc-button mdc-snackbar__action">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+	<script type="text/javascript" src="js/style.js"></script>
+</body>
+</html>
